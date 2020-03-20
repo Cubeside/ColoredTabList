@@ -2,6 +2,7 @@ package de.cubeside.coloredtablist;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 
 public class PlayerJoinEventListener implements Listener {
@@ -13,7 +14,7 @@ public class PlayerJoinEventListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerJoin(org.bukkit.event.player.PlayerJoinEvent event) {
+    public void onPlayerJoin(PlayerJoinEvent event) {
         PacketListener.registerPlayerInfoPacketListener(this.plugin);
     }
 }
